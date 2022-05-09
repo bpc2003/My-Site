@@ -1,0 +1,196 @@
+/* Body */
+body {
+  background-color: #75B2EF;
+}
+
+/* Sections */
+section {
+  text-align: center;
+  padding: 6% 10%;
+}
+
+#footer {
+  background: linear-gradient(to bottom, #75B2EF 0%, #48A1FA 100%);
+}
+
+.footer-link {
+  margin: 0 10px auto 10px;
+}
+
+#top {
+  background: linear-gradient(to bottom, #B3D5F7 0%, #75B2EF 100%);
+  padding: 8% 15%;
+}
+
+#contact-me {
+  padding: 5% 13%;
+}
+
+.cm-head {
+  padding-bottom: 0;
+}
+
+.cm-subhead {
+  padding-bottom: 1%;
+}
+
+/* Container */
+.container-fluid {
+  padding: 2% 15% 0;
+}
+
+/* plane css */
+#plane {
+  width: 25%;
+  height: 25%;
+  position: relative;
+  right: 1000px;
+  display: inline-block;
+}
+
+/* navbar */
+.navbar {
+  padding-bottom: 4.5rem;
+}
+
+.navbar-brand {
+  font-family: 'Satisfy', cursive;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Libre Bodoni', serif;
+  font-weight: bold;
+  color: #D8F6D8;
+  padding: 20px 10px 30px;
+}
+
+.header {
+  font-family: 'Satisfy', cursive;
+  font-weight: normal;
+  font-size: 6rem;
+  color: #70C770;
+  display: none;
+}
+
+.subheader {
+  font-size: 2.5rem;
+  display: none;
+}
+
+.skill-desc {
+  width: 50%;
+  margin: 0 auto 0 auto;
+}
+
+/* horizontial rules */
+hr {
+  border-style: none;
+  border-top-style: dotted;
+  margin: 100px auto 100px auto;
+  border-width: 10px;
+  width: 5%;
+  border-color: #2D3135;
+  background-color: #75B2EF;
+}
+
+/* Text */
+a {
+  text-decoration: none;
+  color: #EAF6F6;
+}
+
+p {
+  color: #D3E8FD;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Font Awesome and images */
+i {
+  font-size: 75px;
+}
+
+.bootstrap-logo {
+  color: #553C7B;
+}
+
+.cloud {
+  display: none;
+  position: relative;
+  width: 12%;
+  height: 12%;
+}
+
+.cloud-1 {
+  left: 200px;
+}
+
+.cloud-2 {
+  right: 200px;
+}
+
+.css-logo {
+  color: #264DE4;
+}
+
+.footer-img {
+  font-size: 20px;
+}
+
+.hand-wave {
+  margin-bottom: 5px;
+  position: relative;
+  transform: rotate(45deg);
+}
+
+.html-logo {
+  color: #F06529;
+}
+
+.js-logo {
+  color: #F0DB4F;
+}
+
+.node-logo {
+  color: #3C873A;
+}
+
+.python-logo {
+  color: #306998;
+}
+
+.rotate {
+  transform: rotate(60deg);
+  transition-property: transform;
+  transition-duration: 1s;
+}
+
+/* cards */
+.card {
+  background-color: #B3D5F7;
+  padding-bottom: 5%;
+}
+
+.cert-desc {
+  color: #75B2EF;
+  width: 25%;
+  margin: 0 auto 20px auto;
+}
+
+.cert-title {
+  color: #34AC34;
+}
+
+@media only screen and (hover: none) and (pointer: coarse){
+  .cert-desc {
+    width: 50%
+  }
+
+  h1, h2, h3, h4, h5, h6{
+    font-size: 3rem;
+  }
+
+  p {
+    font-size: 2rem;
+  }
+}
