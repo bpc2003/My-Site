@@ -37,7 +37,9 @@ input {
   margin-top: 10px;
 }
 
-a {
+.btn-secondary {
   position: relative;
-  margin: 0 auto 0 auto;
+  text-align: center;
+  margin-left: 39%;
+  margin-bottom: 10px;
 }
