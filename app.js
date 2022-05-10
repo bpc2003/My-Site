@@ -45,7 +45,7 @@ app.post("/Contact-Me", function(req, res) {
   if (email.length > 0 && phoneNumber.length > 0 && name.length > 0) {
     if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)) {
       transporter.sendMail({
-        from: email,
+        from: 'benjamin.p.coppe@gmail.com',
         to: 'benjamin.p.coppe@gmail.com',
         subject: name + ' Wants to get in touch',
         text: 'Email: ' + email + '\nPhone Number: ' + phoneNumber + '\nMessage: ' + msg
