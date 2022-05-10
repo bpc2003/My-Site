@@ -1,4 +1,5 @@
 const bodyParser = require('body-parser');
+const fs = require('fs');
 const nodemailer = require('nodemailer');
 const express = require('express');
 const app = express();
@@ -7,14 +8,17 @@ app.use(bodyParser.urlencoded({
   extended: true
 }));
 
-const transporter = nodemailer.createTransport({
-  host: 'smtp.gmail.com',
-  port: 587,
-  auth: {
-    user: 'benjamin.p.coppe@gmail.com',
-    pass: 'Fu77$t@ck'
-  }
-});
+let jsonData;
+let data;
+
+try {
+  jsonData = fs.readFileSync(__dirname + '/login.json');
+  data = JSON.parse(jsonData);
+} catch(e) {
+  console.log(e);
+}
+
+const transporter = nodemailer.createTransport(data);
 
 app.use(express.static(__dirname + "/public"));
 
