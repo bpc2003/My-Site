@@ -27,24 +27,41 @@ app.get("/Contact-Me", function(req, res) {
 });
 
 app.post("/Contact-Me", function(req, res) {
-  res.sendFile(__dirname + "/thanks.html");
   let email = req.body.Email;
   let phoneNumber = req.body.phoneNumber;
-  let msg = req.body.msg;
   let name = req.body.name
+  var msg;
 
-  transporter.sendMail({
-    from: email,
-    to: 'benjamin.p.coppe@gmail.com',
-    subject: name + ' Wants to get in touch',
-    text: 'Email: ' + email + '\nPhone Number: ' + phoneNumber + '\nMessage: ' + msg
-  }, function(err, data) {
-    if (err) {
-      console.log(err);
-    } else {
-      console.log("Sent Email successfully");
+  if (req.body.msg.length > 0) {
+    msg = req.body.msg;
+  } else {
+    msg = "No Message";
+  }
+
+  if (email.length > 0 && phoneNumber.length > 0 && name.length > 0) {
+    if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)) {
+      transporter.sendMail({
+        from: email,
+        to: 'benjamin.p.coppe@gmail.com',
+        subject: name + ' Wants to get in touch',
+        text: 'Email: ' + email + '\nPhone Number: ' + phoneNumber + '\nMessage: ' + msg
+      }, function(err, data) {
+        if (err) {
+          console.log(err);
+          res.sendFile(__dirname + "/failure.html");
+        } else {
+          console.log("Sent Email successfully");
+          res.sendFile(__dirname + "/thanks.html");
+        }
+      });
     }
-  });
+  } else {
+    res.sendFile(__dirname + "/failure.html");
+  }
+});
+
+app.post("/failure", function(req, res) {
+  res.redirect("/Contact-Me")
 });
 
 app.listen(25565, function() {

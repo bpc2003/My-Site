@@ -14,6 +14,7 @@ form {
 input {
   margin-bottom: 10px;
   border-style: none;
+  display: block;
 }
 
 #name {

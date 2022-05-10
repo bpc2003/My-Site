@@ -167,18 +167,17 @@ i {
 
 /* cards */
 .card {
-  background-color: #B3D5F7;
+  background-color: #82BAF3;
   padding-bottom: 5%;
 }
 
 .cert-desc {
-  color: #75B2EF;
-  width: 25%;
+  width: 50%;
   margin: 0 auto 20px auto;
 }
 
-.cert-title {
-  color: #34AC34;
+.col-lg-6 {
+  margin-bottom: 10px;
 }
 
 @media only screen and (hover: none) and (pointer: coarse){
@@ -191,6 +190,14 @@ i {
   }
 
   p {
+    font-size: 2rem;
+  }
+
+  a {
+    font-size: 2rem;
+  }
+
+  .footer-img {
     font-size: 2rem;
   }
 }
