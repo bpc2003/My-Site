@@ -65,7 +65,7 @@ app.post("/Contact-Me", function(req, res) {
 });
 
 app.post("/failure", function(req, res) {
-  res.redirect("/Contact-Me")
+  res.redirect("/Contact-Me");
 });
 
 app.listen(25565, function() {
