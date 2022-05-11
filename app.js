@@ -33,7 +33,7 @@ app.get("/Contact-Me", function(req, res) {
 app.post("/Contact-Me", function(req, res) {
   let email = req.body.Email;
   let phoneNumber = req.body.phoneNumber;
-  let name = req.body.name
+  let name = req.body.name;
   var msg;
 
   if (req.body.msg.length > 0) {
