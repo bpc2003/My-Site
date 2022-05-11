@@ -8,8 +8,8 @@ app.use(bodyParser.urlencoded({
   extended: true
 }));
 
-let jsonData;
-let data;
+var jsonData;
+var data;
 
 try {
   jsonData = fs.readFileSync(__dirname + '/login.json');
