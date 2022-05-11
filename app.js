@@ -58,6 +58,8 @@ app.post("/Contact-Me", function(req, res) {
           res.sendFile(__dirname + "/thanks.html");
         }
       });
+    } else {
+      res.sendFile(__dirname + "/failure.html");
     }
   } else {
     res.sendFile(__dirname + "/failure.html");
