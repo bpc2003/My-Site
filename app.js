@@ -1,12 +1,16 @@
 const bodyParser = require('body-parser');
-const fs = require('fs');
 const nodemailer = require('nodemailer');
 const express = require('express');
+const fs = require('fs');
+
+
 const app = express();
 
 app.use(bodyParser.urlencoded({
   extended: true
 }));
+
+app.set('view engine', 'ejs');
 
 var jsonData;
 var data;
@@ -23,11 +27,11 @@ const transporter = nodemailer.createTransport(data);
 app.use(express.static(__dirname + "/public"));
 
 app.get("/", function(req, res) {
-  res.sendFile(__dirname + "/index.html");
+  res.render("index", {pageTitle: "Ben Coppe"});
 });
 
 app.get("/Contact-Me", function(req, res) {
-  res.sendFile(__dirname + "/contact-me.html");
+  res.render("contact-me", {pageTitle: "Contact Me"});
 });
 
 app.post("/Contact-Me", function(req, res) {
@@ -52,17 +56,17 @@ app.post("/Contact-Me", function(req, res) {
       }, function(err, data) {
         if (err) {
           console.log(err);
-          res.sendFile(__dirname + "/failure.html");
+          res.render("failure");
         } else {
           console.log("Sent Email successfully");
-          res.sendFile(__dirname + "/thanks.html");
+          res.render("thanks", {pageTitle: "Thank You", name: " " + name.split(" ")[0]});
         }
       });
     } else {
-      res.sendFile(__dirname + "/failure.html");
+      res.render("failure");
     }
   } else {
-    res.sendFile(__dirname + "/failure.html");
+    res.render("failure");
   }
 });
 

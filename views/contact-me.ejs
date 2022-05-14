@@ -1,0 +1,25 @@
+<%- include("partials/header"); -%>
+  <link rel="stylesheet" type="text/css" href="/css/contact-me.min.css" />
+  <h3>Contact Me: </h3>
+  <form action="/Contact-Me" method="post">
+    <div class="mb-3">
+      <label for="name" class="form-label">Name: </label>
+      <input id="name" type="text" name="name" class="form-control-sm" placeholder="John Doe" />
+    </div>
+    <div class="mb-3">
+      <label for="email" class="form-label">Email: </label>
+      <input id="email" type="email" name="Email" class="form-control-sm" placeholder="email@example.com" />
+    </div>
+    <div class="mb-3">
+      <label for="phone-number" class="form-label">Phone Number: </label>
+      <input id="phone-number" type="text" name="phoneNumber" class="form-control-sm" placeholder="(555) 555-5555"/>
+    </div>
+    <div class="mb-3">
+      <label for="msg" id="msg-lbl" class="form-label">Message: </label>
+      <textarea id="msg" name="msg" rows="10" cols="30" class="form-control"></textarea>
+    </div>
+
+    <button type="submit" name="button" class="btn btn-primary btn-lg">Submit</button>
+  </form>
+  <a href="/" class="btn btn-secondary btn-lg">Home</a>
+<%- include("partials/footer"); -%>
