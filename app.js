@@ -59,7 +59,7 @@ app.post("/Contact-Me", function(req, res) {
           res.render("failure");
         } else {
           console.log("Sent Email successfully");
-          res.render("thanks", {pageTitle: "Thank You", name: " " + name.split(" ")[0]});
+          res.render("thanks", {pageTitle: "Thank You", name: name.split(" ")[0]});
         }
       });
     } else {
