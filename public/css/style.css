@@ -123,6 +123,10 @@ i {
   color: #F0DB4F;
 }
 
+.cert-logo {
+  font-size: 35px;
+}
+
 @media (pointer:none), (pointer:coarse) {
   .top, .footer {
     height: 100%;
