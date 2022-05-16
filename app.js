@@ -47,7 +47,6 @@ app.post("/Contact-Me", function(req, res) {
   }
 
   if (email.length > 0 && phoneNumber.length > 0 && name.length > 0) {
-    if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)) {
       transporter.sendMail({
         from: 'benjamin.p.coppe@gmail.com',
         to: 'benjamin.p.coppe@gmail.com',
@@ -65,9 +64,6 @@ app.post("/Contact-Me", function(req, res) {
     } else {
       res.render("failure");
     }
-  } else {
-    res.render("failure");
-  }
 });
 
 app.post("/failure", function(req, res) {

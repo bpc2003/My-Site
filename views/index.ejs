@@ -1,104 +1,88 @@
 <%- include("partials/header"); -%>
-  <section id="top">
-    <div class="container-fluid">
-      <nav class="navbar navbar-expand-lg navbar-dark">
-        <div class="container-fluid">
-          <a href="#" class="navbar-brand">Benjamin Coppe</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-        </div>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="#skills">Skills</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#credentials">Certificates</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#contact-me">Contact</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
 
-      <img src="/images/plane.png" id="plane" />
-      <img src="/images/cloud.png" alt="cloud" class="cloud cloud-2">
-      <h1 class="header">Ben Coppe.</h1>
-      <h3 class="subheader">A <span style="text-decoration:underline;">pro</span>grammer.</h3>
-      <img src="/images/cloud.png" alt="cloud" class="cloud cloud-1">
-    </div>
-  </section>
+<nav class="navbar navbar-expand-lg navbar-light">
+  <div class="container-fluid">
+    <a href="#" class="navbar-brand">Benjamin Coppe</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </div>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ms-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="https://github.com/bpc2003">Github</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="https://www.linkedin.com/in/benjamin-coppe-8595451a4/">LinkedIn</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/Contact-Me">Contact</a>
+      </li>
+    </ul>
+  </div>
+</nav>
 
-  <section id="intro">
+<section class="top">
+  <div class="child">
+    <h1 class="header">Ben Coppe.</h1>
+    <h3 class="subheader">A <span style="text-decoration:underline;">pro</span>grammer.</h3>
+  </div>
+</section>
+
+<section class="intro">
+  <div class="child">
     <i class="fa-solid fa-hand hand-wave"></i>
     <h2 id="hello-there">Hello There</h2>
     <p>I'm a student trying to jump-start my career into web development</p>
     <p>and have skills that would make me ideal for any position</p>
-  </section>
+  </div>
+</section>
 
-  <hr />
 
-  <section id="skills">
-    <h2>Skills</h2>
-    <div id="skills-carousel" class="carousel slide" data-bs-ride="false">
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <i class="fa-brands fa-python python-logo"></i>
-          <h3>Python</h3>
-          <p class="skill-desc">I know a lot of Python and am certified in it</p>
-        </div>
-        <div class="carousel-item">
-          <i class="fa-brands fa-js js-logo"></i>
-          <h3>JavaScript</h3>
-          <p class="skill-desc">I know JavaScript and used it to build this site</p>
-        </div>
-        <div class="carousel-item">
-          <i class="fa-brands fa-node-js node-logo"></i>
-          <h3>Node.js</h3>
-          <p class="skill-desc">I know node.js and used it to build the back-end of my site</p>
-        </div>
-        <div class="carousel-item">
-          <i class="fa-brands fa-bootstrap bootstrap-logo"></i>
-          <h3>Bootstrap 5</h3>
-          <p class="skill-desc">I know Bootstrap and used it to help make the front-end of this site</p>
-        </div>
-        <div class="carousel-item">
-          <i class="fa-brands fa-html5 html-logo"></i>
-          <h3>HTML 5</h3>
-          <p class="skill-desc">
-            I know HTML and have used it in various projects
-            including previous iterations of this site
-          </p>
-        </div>
-        <div class="carousel-item">
-          <i class="fa-brands fa-css3-alt css-logo"></i>
-          <h3>CSS 3</h3>
-          <p class="skill-desc">
-            I know CSS and have, also used it in
-            various projects including previous iterations of this site
-          </p>
+<section class="content">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-6">
+        <h2>Technologies</h2>
+        <div id="skills-carousel" class="carousel slide" data-bs-ride="false">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <i class="fa-brands fa-python python-logo"></i>
+              <h3>Python</h3>
+            </div>
+            <div class="carousel-item">
+              <i class="fa-brands fa-js js-logo"></i>
+              <h3>JavaScript</h3>
+            </div>
+            <div class="carousel-item">
+              <i class="fa-brands fa-node-js node-logo"></i>
+              <h3>Node.js</h3>
+            </div>
+            <div class="carousel-item">
+              <i class="fa-brands fa-bootstrap bootstrap-logo"></i>
+              <h3>Bootstrap 5</h3>
+            </div>
+            <div class="carousel-item">
+              <i class="fa-brands fa-html5 html-logo"></i>
+              <h3>HTML 5</h3>
+            </div>
+            <div class="carousel-item">
+              <i class="fa-brands fa-css3-alt css-logo"></i>
+              <h3>CSS 3</h3>
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#skills-carousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#skills-carousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
         </div>
       </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#skills-carousel" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#skills-carousel" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
-    </div>
-  </section>
-
-  <hr />
-
-  <section id="credentials">
-    <h2>Certifications</h2>
-    <div class="row">
-      <div class="col-lg-6">
-        <div class="card">
+      <div class="col-6">
+        <div class="card child">
           <div class="card-header">
             <h3 class="cert-title">Python (Basic)</h3>
           </div>
@@ -112,8 +96,24 @@
           </div>
         </div>
       </div>
-      <div class="col-lg-6">
-        <div class="card">
+    </div>
+
+    <div class="row">
+      <div class="col-6">
+        <div class="child">
+          <h2 class="cm-head">Contact Me:</h2>
+          <h3 class="cm-subhead">Email & Phone Number: </h3>
+          <p>
+            Email: benjamin.p.coppe@gmail.com <br />
+            Phone Number: +1 (631) 784-5973
+          </p>
+
+          <a href="/Contact-Me" class="btn btn-outline-dark btn-lg" role="buttone">Contact Me</a>
+        </div>
+      </div>
+
+      <div class="col-6">
+        <div class="card child">
           <div class="card-header">
             <h3 class="cert-title">Python (Intermediate)</h3>
           </div>
@@ -127,32 +127,13 @@
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <hr />
-
-  <section id="contact-me">
-    <h2 class="cm-head">Contact Me:</h2>
-    <h3 class="cm-subhead">Email & Phone Number</h3>
-    <p>
-      Email: benjamin.p.coppe@gmail.com <br />
-      Phone Number: +1 (631) 784-5973
-    </p>
-
-    <a href="/Contact-Me" class="btn btn-outline-light btn-lg" role="buttone">Contact Me</a>
-  </section>
-
-  <section id="footer">
-    <a href="https://www.linkedin.com/in/benjamin-coppe-8595451a4/" class="footer-link"><i class="fa-brands fa-linkedin footer-img"></i> LinkedIn</a>
-    <a href="https://github.com/bpc2003" class="footer-link"><i class="fa-brands fa-github footer-img"></i> GitHub</a>
-    <a href="/Contact-Me" class="footer-link"><i class="fa-solid fa-globe footer-img"></i> Contact Me</a>
-    <br />
-    <br />
-    <a href="https://www.flaticon.com/free-icons/plane" title="plane icons">Plane icons created by DinosoftLabs - Flaticon</a>
-    <br />
-    <a href="https://www.flaticon.com/free-icons/cloud-computing" title="cloud computing icons">Cloud computing icons created by Freepik - Flaticon</a>
-    <br />
-    <br />
-    <p class="cc">&copy; Benjamin Coppe.</p>
-  </section>
-  <%- include("partials/footer"); -%>
+<section class="footer">
+  <a href="https://www.linkedin.com/in/benjamin-coppe-8595451a4/" class="footer-link"><i class="fa-brands fa-linkedin footer-img"></i> LinkedIn</a>
+  <a href="https://github.com/bpc2003" class="footer-link"><i class="fa-brands fa-github footer-img"></i> GitHub</a>
+  <a href="/Contact-Me" class="footer-link"><i class="fa-solid fa-globe footer-img"></i> Contact Me</a>
+  <p>&copy; 2022, Benjamin Coppe</p>
+</section>
+<%- include("partials/footer"); -%>
