@@ -1,3 +1,9 @@
+$(".hand-wave").hover(function() {
+  $(this).addClass("rotate");
+}, function() {
+  $(this).removeClass("rotate");
+});
+
 // Alter hello there text if it's clicked
 let alterText = false;
 

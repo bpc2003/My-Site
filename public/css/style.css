@@ -5,8 +5,8 @@ body {
 
 /* General Section Rules */
 section {
-  padding: 7% 15%;
   text-align: center;
+  margin-bottom: 10px;
 }
 
 section .child {
@@ -17,17 +17,24 @@ section .child {
 /* Top Section Rules */
 .top {
   background-color: #000;
+  padding: 7% 15%;
+}
+
+.header, .subheader {
   color: #fff;
 }
 
 /* Intro Section Rules */
 .intro {
   margin: 20px 0 20px 0;
-  padding: 1.25% 3.75%
 }
 
 .hand-wave {
   transform: rotate(45deg);
+}
+
+.intro, .content {
+  padding: 3% 7%;
 }
 
 /* Content Section Rules */
@@ -44,9 +51,12 @@ section .child {
   filter: invert(100%);
 }
 
+/* Footer Section Rules */
 .footer {
   background-color: #000;
   color: #fff;
+  padding: 7% 15%;
+  margin-bottom: 0;
 }
 
 .footer a {
@@ -56,7 +66,6 @@ section .child {
   margin-bottom: 20px;
 }
 
-/* Footer Section Rules */
 .footer i {
   font-size: 1.25rem;
 }
@@ -72,7 +81,7 @@ section .child {
 /* General Text and FontAwesome CSS */
 h1, h2, h3, h4, h5, h6 {
   font-family: "Roboto", sans-serif;
-
+  color: #181935;
 }
 
 p {
@@ -84,8 +93,38 @@ i {
   margin-bottom: 10px;
 }
 
+.rotate {
+  transform: rotate(60deg);
+  transition-property: transform;
+  transition-duration: 1s;
+}
+
+.python-logo {
+  color: #306998;
+}
+
+.node-logo {
+  color: #3C873A;
+}
+
+.bootstrap-logo {
+  color: #553C7B;
+}
+
+.html-logo {
+  color: #E34C26;
+}
+
+.css-logo {
+  color: #264DE4;
+}
+
+.js-logo {
+  color: #F0DB4F;
+}
+
 @media (pointer:none), (pointer:coarse) {
-  section {
+  .top, .footer {
     height: 100%;
     min-height: 500px;
     padding-bottom: 1.25%;
