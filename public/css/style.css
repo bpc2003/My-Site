@@ -51,6 +51,15 @@ section .child {
   filter: invert(100%);
 }
 
+.card {
+  width: 60%;
+  margin-right: 20px
+}
+
+.cert-desc {
+  width: 75%;
+}
+
 /* Footer Section Rules */
 .footer {
   background-color: #000;
@@ -136,5 +145,13 @@ i {
   }
   .top h1 {
     margin-top: 75%;
+  }
+
+  .card {
+    width: 70%;
+  }
+
+  .cert-desc {
+    width: 85%;
   }
 }

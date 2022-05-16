@@ -15,10 +15,23 @@ app.set('view engine', 'ejs');
 var jsonData;
 var data;
 
+let date = new Date();
+let currentYear = date.getFullYear()
+
+let skills = [
+  ['Python', 'fa-brands fa-python python-logo'],
+  ['Node.js', 'fa-brands fa-node-js node-logo'],
+  ['Bootstrap 5', 'fa-brands fa-bootstrap bootstrap-logo'],
+  ['HTML 5', 'fa-brands fa-html5 html-logo'],
+  ['CSS 3', 'fa-brands fa-css3-alt css-logo'],
+  ['JavaScript', 'fa-brands fa-js js-logo']
+];
+let isActive = true;
+
 try {
   jsonData = fs.readFileSync(__dirname + '/login.json');
   data = JSON.parse(jsonData);
-} catch(e) {
+} catch (e) {
   console.log(e);
 }
 
@@ -27,11 +40,18 @@ const transporter = nodemailer.createTransport(data);
 app.use(express.static(__dirname + "/public"));
 
 app.get("/", function(req, res) {
-  res.render("index", {pageTitle: "Ben Coppe"});
+  res.render("index", {
+    pageTitle: "Ben Coppe",
+    skills: skills,
+    isActive: isActive,
+    currentYear: currentYear
+  });
 });
 
 app.get("/Contact-Me", function(req, res) {
-  res.render("contact-me", {pageTitle: "Contact Me"});
+  res.render("contact-me", {
+    pageTitle: "Contact Me"
+  });
 });
 
 app.post("/Contact-Me", function(req, res) {
@@ -47,23 +67,30 @@ app.post("/Contact-Me", function(req, res) {
   }
 
   if (email.length > 0 && phoneNumber.length > 0 && name.length > 0) {
-      transporter.sendMail({
-        from: 'benjamin.p.coppe@gmail.com',
-        to: 'benjamin.p.coppe@gmail.com',
-        subject: name + ' Wants to get in touch',
-        text: 'Email: ' + email + '\nPhone Number: ' + phoneNumber + '\nMessage: ' + msg
-      }, function(err, data) {
-        if (err) {
-          console.log(err);
-          res.render("failure", {pageTitle: "failure"});
-        } else {
-          console.log("Sent Email successfully");
-          res.render("thanks", {pageTitle: "Thank You", name: name.split(" ")[0]});
-        }
-      });
-    } else {
-      res.render("failure", {pageTitle: "failure"});
-    }
+    transporter.sendMail({
+      from: 'benjamin.p.coppe@gmail.com',
+      to: 'benjamin.p.coppe@gmail.com',
+      subject: name + ' Wants to get in touch',
+      text: 'Email: ' + email + '\nPhone Number: ' + phoneNumber + '\nMessage: ' + msg
+    }, function(err, data) {
+      if (err) {
+        console.log(err);
+        res.render("failure", {
+          pageTitle: "failure"
+        });
+      } else {
+        console.log("Sent Email successfully");
+        res.render("thanks", {
+          pageTitle: "Thank You",
+          name: name.split(" ")[0]
+        });
+      }
+    });
+  } else {
+    res.render("failure", {
+      pageTitle: "failure"
+    });
+  }
 });
 
 app.post("/failure", function(req, res) {

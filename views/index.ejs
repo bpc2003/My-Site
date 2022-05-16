@@ -46,30 +46,20 @@
         <h2>Technologies</h2>
         <div id="skills-carousel" class="carousel slide" data-bs-ride="false">
           <div class="carousel-inner">
+            <% skills.forEach((skill) => { %>
+            <% if(isActive) { %>
             <div class="carousel-item active">
-              <i class="fa-brands fa-python python-logo"></i>
-              <h3>Python</h3>
+              <i class="<%= skill[1] %>"></i>
+              <h3> <%= skill[0] %> </h3>
             </div>
+            <% isActive = false; %>
+            <% } else { %>
             <div class="carousel-item">
-              <i class="fa-brands fa-node-js node-logo"></i>
-              <h3>Node.js</h3>
+              <i class="<%= skill[1] %>"></i>
+              <h3> <%= skill[0] %> </h3>
             </div>
-            <div class="carousel-item">
-              <i class="fa-brands fa-bootstrap bootstrap-logo"></i>
-              <h3>Bootstrap 5</h3>
-            </div>
-            <div class="carousel-item">
-              <i class="fa-brands fa-html5 html-logo"></i>
-              <h3>HTML 5</h3>
-            </div>
-            <div class="carousel-item">
-              <i class="fa-brands fa-css3-alt css-logo"></i>
-              <h3>CSS 3</h3>
-            </div>
-            <div class="carousel-item">
-              <i class="fa-brands fa-js js-logo"></i>
-              <h3>JavaScript</h3>
-            </div>
+            <% } %>
+            <% }); %>
           </div>
           <button class="carousel-control-prev" type="button" data-bs-target="#skills-carousel" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -84,7 +74,8 @@
       <div class="col-6">
         <div class="card child">
           <div class="card-header">
-            <h3 class="cert-title"><i class="fa-brands fa-python python-logo cert-logo"></i> Python (Basic)</h3>
+            <h3 class="card-title"><i class="fa-brands fa-python python-logo cert-logo"></i> Python</h3>
+            <h4 class="card-subtitle mb-2 text-muted">(Basic)</h4>
           </div>
           <div class="card-body">
             <p class="cert-desc">
@@ -115,7 +106,8 @@
       <div class="col-6">
         <div class="card child">
           <div class="card-header">
-            <h3 class="cert-title"><i class="fa-brands fa-python python-logo cert-logo"></i> Python (Intermediate)</h3>
+            <h3 class="card-title"><i class="fa-brands fa-python python-logo cert-logo"></i> Python</h3>
+            <h4 class="card-subtitle mb-2 text-muted">(Intermediate)</h4>
           </div>
           <div class="card-body">
             <p class="cert-desc">
@@ -134,7 +126,7 @@
   <a href="https://www.linkedin.com/in/benjamin-coppe-8595451a4/" class="footer-link"><i class="fa-brands fa-linkedin footer-img"></i> LinkedIn</a>
   <a href="https://github.com/bpc2003" class="footer-link"><i class="fa-brands fa-github footer-img"></i> GitHub</a>
   <a href="/Contact-Me" class="footer-link"><i class="fa-solid fa-globe footer-img"></i> Contact Me</a>
-  <p>&copy; 2022 Benjamin Coppe</p>
+  <p>&copy; <%= currentYear %> Benjamin Coppe</p>
 </section>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
