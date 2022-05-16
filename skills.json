@@ -1,0 +1,10 @@
+{
+  "Skills": [
+    ["Python", "fa-brands fa-python python-logo"],
+    ["Node.js", "fa-brands fa-node-js node-logo"],
+    ["Bootstrap 5", "fa-brands fa-bootstrap bootstrap-logo"],
+    ["HTML 5", "fa-brands fa-html5 html-logo"],
+    ["CSS 3", "fa-brands fa-css3-alt css-logo"],
+    ["JavaScript", "fa-brands fa-js js-logo"]
+  ]
+}

@@ -3,7 +3,6 @@ const nodemailer = require('nodemailer');
 const express = require('express');
 const fs = require('fs');
 
-
 const app = express();
 
 app.use(bodyParser.urlencoded({
@@ -15,25 +14,25 @@ app.set('view engine', 'ejs');
 var jsonData;
 var data;
 
-let date = new Date();
-let currentYear = date.getFullYear()
-
-let skills = [
-  ['Python', 'fa-brands fa-python python-logo'],
-  ['Node.js', 'fa-brands fa-node-js node-logo'],
-  ['Bootstrap 5', 'fa-brands fa-bootstrap bootstrap-logo'],
-  ['HTML 5', 'fa-brands fa-html5 html-logo'],
-  ['CSS 3', 'fa-brands fa-css3-alt css-logo'],
-  ['JavaScript', 'fa-brands fa-js js-logo']
-];
-let isActive = true;
-
 try {
   jsonData = fs.readFileSync(__dirname + '/login.json');
   data = JSON.parse(jsonData);
 } catch (e) {
   console.log(e);
 }
+
+var skills;
+try {
+  jsonData = fs.readFileSync(__dirname + '/skills.json');
+  skills = JSON.parse(jsonData);
+}  catch (e) {
+  console.log(e)
+}
+
+let isActive = true;
+
+let date = new Date();
+let currentYear = date.getFullYear()
 
 const transporter = nodemailer.createTransport(data);
 
@@ -42,7 +41,7 @@ app.use(express.static(__dirname + "/public"));
 app.get("/", function(req, res) {
   res.render("index", {
     pageTitle: "Ben Coppe",
-    skills: skills,
+    skills: skills.Skills,
     isActive: isActive,
     currentYear: currentYear
   });
