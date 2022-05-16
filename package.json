@@ -1,11 +1,11 @@
 {
-  "name": "express-server",
+  "name": "My-Site",
   "version": "1.0.0",
   "description": "express-server",
-  "main": "server.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node app.js"
   },
   "author": "bpc2003",
   "license": "ISC",
