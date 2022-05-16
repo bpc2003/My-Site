@@ -55,14 +55,14 @@ app.post("/Contact-Me", function(req, res) {
       }, function(err, data) {
         if (err) {
           console.log(err);
-          res.render("failure");
+          res.render("failure", {pageTitle: "failure"});
         } else {
           console.log("Sent Email successfully");
           res.render("thanks", {pageTitle: "Thank You", name: name.split(" ")[0]});
         }
       });
     } else {
-      res.render("failure");
+      res.render("failure", {pageTitle: "failure"});
     }
 });
 
@@ -70,6 +70,6 @@ app.post("/failure", function(req, res) {
   res.redirect("/Contact-Me");
 });
 
-app.listen(25565, function() {
-  console.log("Running on port 25565");
+app.listen(3000, function() {
+  console.log("Running on port 3000");
 });
