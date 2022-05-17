@@ -53,11 +53,15 @@ section .child {
 
 .card {
   width: 60%;
-  margin-right: 20px
 }
 
 .cert-desc {
   width: 75%;
+}
+
+.lower {
+  margin-top: 100px;
+  margin-right: 80px;
 }
 
 /* Footer Section Rules */
@@ -143,15 +147,20 @@ i {
     padding-bottom: 1.25%;
     padding-top: 1.25%;
   }
+  
   .top h1 {
     margin-top: 75%;
   }
 
   .card {
-    width: 70%;
+    width: 85%;
   }
 
   .cert-desc {
     width: 85%;
+  }
+
+  .lower {
+    margin-right: auto;
   }
 }

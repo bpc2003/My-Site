@@ -42,21 +42,19 @@
 <section class="content">
   <div class="container-fluid">
     <div class="row">
+      <% for(let i = 0; i < certificates.titles.length; i++) {%>
+        <div class="col-6">
+          <%- include("partials/card", {title: certificates.titles[i], desc: certificates.descs[i],
+                                        href: certificates.hrefs[i]}); -%>
+        </div>
+      <% } %>
+    </div>
+
+    <div class="row lower">
       <div class="col-6">
         <h2>Technologies</h2>
         <%- include("partials/carousel"); -%>
       </div>
-
-      <div class="col-6">
-        <%- include("partials/card", {img: certificates.logos[0],
-                                      title: certificates.titles[0],
-                                      subtitle: certificates.subtitles[0],
-                                      desc: certificates.descs[0],
-                                      href: certificates.hrefs[0]}); -%>
-      </div>
-    </div>
-
-    <div class="row">
       <div class="col-6">
         <div class="child">
           <h2>Contact Me:</h2>
@@ -68,14 +66,6 @@
 
           <a href="/Contact-Me" class="btn btn-outline-dark btn-lg" role="button">Contact Me</a>
         </div>
-      </div>
-
-      <div class="col-6">
-        <%- include("partials/card", {img: certificates.logos[1],
-                                      title: certificates.titles[1],
-                                      subtitle: certificates.subtitles[1],
-                                      desc: certificates.descs[1],
-                                      href: certificates.hrefs[1]}); -%>
       </div>
     </div>
   </div>
