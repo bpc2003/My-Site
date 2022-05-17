@@ -48,6 +48,13 @@ app.get("/", function(req, res) {
   });
 });
 
+app.get("/about-me", function(req, res) {
+  res.render("about", {
+    pageTitle: "About Me",
+    currentYear: currentYear
+  });
+});
+
 app.get("/Contact-Me", function(req, res) {
   res.render("contact-me", {
     pageTitle: "Contact Me",
@@ -77,7 +84,6 @@ app.post("/Contact-Me", function(req, res) {
       if (err) {
         console.log(err);
         res.render("failure", {
-          pageTitle: "failure",
           currentYear: currentYear
         });
       } else {
@@ -91,7 +97,6 @@ app.post("/Contact-Me", function(req, res) {
     });
   } else {
     res.render("failure", {
-      pageTitle: "failure",
       currentYear: currentYear
     });
   }

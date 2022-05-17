@@ -16,7 +16,6 @@ section .child {
 
 /* Top Section Rules */
 .top {
-  background-color: #000;
   padding: 7% 15%;
 }
 
@@ -70,7 +69,6 @@ section .child {
 
 /* Footer Section Rules */
 .footer {
-  background-color: #000;
   color: #fff;
   padding: 7% 15%;
   margin-bottom: 0;
@@ -98,7 +96,7 @@ section .child {
 /* General Text and FontAwesome CSS */
 h1, h2, h3, h4, h5, h6 {
   font-family: "Roboto", sans-serif;
-  color: #181935;
+  color: #21251FD9;
 }
 
 p {

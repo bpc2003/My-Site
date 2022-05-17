@@ -1,28 +1,5 @@
 <%- include("partials/header"); -%>
-
-<nav class="navbar navbar-expand-lg navbar-light">
-  <div class="container-fluid">
-    <a href="#" class="navbar-brand">Benjamin Coppe</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-  </div>
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav ms-auto">
-      <li class="nav-item">
-        <a class="nav-link" href="https://github.com/bpc2003">Github</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="https://www.linkedin.com/in/benjamin-coppe-8595451a4/">LinkedIn</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/Contact-Me">Contact</a>
-      </li>
-    </ul>
-  </div>
-</nav>
-
-<section class="top">
+<section class="top bg-dark">
   <div class="child">
     <h1 class="header">Ben Coppe.</h1>
     <h3 class="subheader">A Web Developer.</h3>
@@ -33,8 +10,7 @@
   <div class="child">
     <i class="fa-solid fa-hand hand-wave"></i>
     <h2 id="hello-there">Hello There</h2>
-    <p>I'm a student trying to jump-start my career into web development</p>
-    <p>and have skills that would make me ideal for any position</p>
+    <p style="width: 70%;">I'm a student trying to jump-start my career into web development</p>
   </div>
 </section>
 
@@ -56,7 +32,7 @@
               Email: benjamin.p.coppe@gmail.com <br />
               Phone Number: +1 (631) 784-5973
             </p>
-            <a href="/Contact-Me" class="btn btn-outline-dark btn-lg" role="button">Contact Me</a>
+            <a href="/contact-me" class="btn btn-outline-dark btn-lg" role="button">Contact Me</a>
           </div>
         </div>
       </div>
@@ -65,7 +41,7 @@
           <% for(let i = 0; i < certificates.titles.length; i++) {%>
           <div class="card-div">
             <%- include("partials/card", {title: certificates.titles[i], desc: certificates.descs[i],
-                                              href: certificates.hrefs[i]}); -%>
+                                          href: certificates.hrefs[i]}); -%>
           </div>
           <% } %>
         </div>
