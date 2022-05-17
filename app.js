@@ -11,6 +11,8 @@ app.use(bodyParser.urlencoded({
 
 app.set('view engine', 'ejs');
 
+const aboutMeContent = "Ben Coppe is a student trying to launch my career as a full-stack developer. He's been interested in computers and programming since 3rd grade, it all started when his older brother got me a raspberry pi 3 and a book on programming it, and from there his fascination grew exponentially. His fascination led him to learning many different things about computers, and has made various different projects which show off his knowledge, not the least of which is his website. He is currently looking to work as a freelance web developer, doing both back-end and front-end development."
+
 var jsonData;
 var data;
 
@@ -51,6 +53,7 @@ app.get("/", function(req, res) {
 app.get("/about-me", function(req, res) {
   res.render("about", {
     pageTitle: "About Me",
+    content: aboutMeContent,
     currentYear: currentYear
   });
 });
