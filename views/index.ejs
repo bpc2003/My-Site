@@ -44,32 +44,7 @@
     <div class="row">
       <div class="col-6">
         <h2>Technologies</h2>
-        <div id="skills-carousel" class="carousel slide" data-bs-ride="false">
-          <div class="carousel-inner">
-            <% skills.forEach((skill) => { %>
-            <% if(isActive) { %>
-            <div class="carousel-item active">
-              <i class="<%= skill[1] %>"></i>
-              <h3> <%= skill[0] %> </h3>
-            </div>
-            <% isActive = false; %>
-            <% } else { %>
-            <div class="carousel-item">
-              <i class="<%= skill[1] %>"></i>
-              <h3> <%= skill[0] %> </h3>
-            </div>
-            <% } %>
-            <% }); %>
-          </div>
-          <button class="carousel-control-prev" type="button" data-bs-target="#skills-carousel" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-          </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#skills-carousel" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-          </button>
-        </div>
+        <%- include("partials/carousel"); -%>
       </div>
 
       <div class="col-6">
@@ -93,14 +68,14 @@
     <div class="row">
       <div class="col-6">
         <div class="child">
-          <h2 class="cm-head">Contact Me:</h2>
-          <h3 class="cm-subhead">Email & Phone Number: </h3>
+          <h2>Contact Me:</h2>
+          <h3>Email & Phone Number: </h3>
           <p>
             Email: benjamin.p.coppe@gmail.com <br />
             Phone Number: +1 (631) 784-5973
           </p>
 
-          <a href="/Contact-Me" class="btn btn-outline-dark btn-lg" role="buttone">Contact Me</a>
+          <a href="/Contact-Me" class="btn btn-outline-dark btn-lg" role="button">Contact Me</a>
         </div>
       </div>
 
