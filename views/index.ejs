@@ -48,20 +48,11 @@
       </div>
 
       <div class="col-6">
-        <div class="card child">
-          <div class="card-header">
-            <h3 class="card-title"><i class="fa-brands fa-python python-logo cert-logo"></i> Python</h3>
-            <h4 class="card-subtitle mb-2 text-muted">(Basic)</h4>
-          </div>
-          <div class="card-body">
-            <p class="cert-desc">
-              Covers topics like Scalar Types, Operators and Control Flow,
-              Strings, Collections and Iteration, Modularity, Objects
-              and Types and Classes
-            </p>
-            <a class="btn btn-outline-primary btn-lg" href="https://www.hackerrank.com/certificates/225d8495da2d" role="button">Certification</a>
-          </div>
-        </div>
+        <%- include("partials/card", {img: certificates.logos[0],
+                                      title: certificates.titles[0],
+                                      subtitle: certificates.subtitles[0],
+                                      desc: certificates.descs[0],
+                                      href: certificates.hrefs[0]}); -%>
       </div>
     </div>
 
@@ -80,19 +71,11 @@
       </div>
 
       <div class="col-6">
-        <div class="card child">
-          <div class="card-header">
-            <h3 class="card-title"><i class="fa-brands fa-python python-logo cert-logo"></i> Python</h3>
-            <h4 class="card-subtitle mb-2 text-muted">(Intermediate)</h4>
-          </div>
-          <div class="card-body">
-            <p class="cert-desc">
-              Covers topics like Closures and Decorators, using magic methods in Python,
-              Collections, Exceptions, Errors, and using Context Managers
-            </p>
-            <a class="btn btn-outline-primary btn-lg" href="https://www.hackerrank.com/certificates/5be50dcb4287" role="button">Certification</a>
-          </div>
-        </div>
+        <%- include("partials/card", {img: certificates.logos[1],
+                                      title: certificates.titles[1],
+                                      subtitle: certificates.subtitles[1],
+                                      desc: certificates.descs[1],
+                                      href: certificates.hrefs[1]}); -%>
       </div>
     </div>
   </div>

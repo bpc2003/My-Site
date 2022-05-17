@@ -43,7 +43,8 @@ app.get("/", function(req, res) {
     pageTitle: "Ben Coppe",
     skills: skills.Skills,
     isActive: isActive,
-    currentYear: currentYear
+    currentYear: currentYear,
+    certificates: skills.Certificates
   });
 });
 
