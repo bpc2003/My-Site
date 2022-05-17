@@ -1,12 +1,15 @@
 <%- include("partials/header"); -%>
-<link rel="stylesheet" href="css/failure.css">
-<h3>Uh Oh</h3>
-<p>
-  It Seems something went wrong, please
-  contact the site adminstrator or press the button try again.
-</p>
-<form action="/failure" method="post">
-  <button type="submit" name="button" class="btn btn btn-warning">Try Again</button>
-  <a href="/" class="btn btn-secondary btn">Home</a>
-</form>
+<link rel="stylesheet" href="css/failure.min.css">
+<section>
+  <h3>Uh Oh</h3>
+  <p>
+    It Seems something went wrong, please
+    contact the site adminstrator <br />
+    or press the button to try again.
+  </p>
+  <form action="/failure" method="post">
+    <button type="submit" name="button" class="btn btn btn-warning">Try Again</button>
+    <a href="/" class="btn btn-secondary btn">Home</a>
+  </form>
+</section>
 <%- include("partials/footer"); -%>

@@ -50,7 +50,8 @@ app.get("/", function(req, res) {
 
 app.get("/Contact-Me", function(req, res) {
   res.render("contact-me", {
-    pageTitle: "Contact Me"
+    pageTitle: "Contact Me",
+    currentYear: currentYear
   });
 });
 
@@ -76,19 +77,22 @@ app.post("/Contact-Me", function(req, res) {
       if (err) {
         console.log(err);
         res.render("failure", {
-          pageTitle: "failure"
+          pageTitle: "failure",
+          currentYear: currentYear
         });
       } else {
         console.log("Sent Email successfully");
         res.render("thanks", {
           pageTitle: "Thank You",
-          name: name.split(" ")[0]
+          name: name.split(" ")[0],
+          currentYear: currentYear
         });
       }
     });
   } else {
     res.render("failure", {
-      pageTitle: "failure"
+      pageTitle: "failure",
+      currentYear: currentYear
     });
   }
 });
