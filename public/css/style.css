@@ -3,6 +3,11 @@ body {
   color: #000;
 }
 
+/* navbar rules */
+.fa-house {
+  font-size: 1.5rem;
+}
+
 /* General Section Rules */
 section {
   text-align: center;
