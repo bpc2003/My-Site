@@ -5,8 +5,13 @@
 }
 
 .about-me p {
-  width: 60%;
+  width: 45%;
 }
+
+.about-me a {
+  text-decoration: none;
+}
+
 
 .footer {
   text-align: center;
@@ -17,11 +22,6 @@
   .about-me {
     min-height: 1000px;
     height: 100%;
-    text-align: center;
     margin: 100px auto 100px auto;
-  }
-  .about-me p {
-    text-align: center;
-    margin: 0 auto 0 auto;
   }
 }

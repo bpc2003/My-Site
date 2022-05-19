@@ -1,3 +1,4 @@
+require('dotenv').config();
 const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
 const express = require('express');
@@ -11,18 +12,7 @@ app.use(bodyParser.urlencoded({
 
 app.set('view engine', 'ejs');
 
-const aboutMeContent = "Ben Coppe is a student trying to launch my career as a full-stack developer. He's been interested in computers and programming since 3rd grade, it all started when his older brother got me a raspberry pi 3 and a book on programming it, and from there his fascination grew exponentially. His fascination led him to learning many different things about computers, and has made various different projects which show off his knowledge, not the least of which is his website. He is currently looking to work as a freelance web developer, doing both back-end and front-end development."
-
 var jsonData;
-var data;
-
-try {
-  jsonData = fs.readFileSync(__dirname + '/login.json');
-  data = JSON.parse(jsonData);
-} catch (e) {
-  console.log(e);
-}
-
 var skills;
 try {
   jsonData = fs.readFileSync(__dirname + '/skills.json');
@@ -36,7 +26,14 @@ let isActive = true;
 let date = new Date();
 let currentYear = date.getFullYear()
 
-const transporter = nodemailer.createTransport(data);
+const transporter = nodemailer.createTransport({
+  host:"smtp.gmail.com",
+  port:587,
+  auth:{
+    user:"benjamin.p.coppe@gmail.com",
+    pass: process.env.PASS
+  }
+});
 
 app.use(express.static(__dirname + "/public"));
 
@@ -53,7 +50,6 @@ app.get("/", function(req, res) {
 app.get("/about-me", function(req, res) {
   res.render("about", {
     pageTitle: "About Me",
-    content: aboutMeContent,
     currentYear: currentYear
   });
 });
