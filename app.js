@@ -42,8 +42,6 @@ try {
   console.log(e)
 }
 
-let isActive = true;
-
 let date = new Date();
 let currentYear = date.getFullYear()
 
