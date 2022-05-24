@@ -36,7 +36,7 @@ let jsonData;
 let certificates;
 
 try {
-  jsonData = fs.readFileSync(__dirname + '/skills.json');
+  jsonData = fs.readFileSync(__dirname + '/certificates.json');
   certificates = JSON.parse(jsonData);
 } catch (e) {
   console.log(e)
