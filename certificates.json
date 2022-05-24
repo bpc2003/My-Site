@@ -1,0 +1,9 @@
+{
+	"Certificates": {
+		"titles": ["Python (Basic)", "Python (Intermediate)"],
+		"descs": ["Covers topics like Scalar Types, Operators and Control Flow, Strings, Collections and Iteration, Modularity, Objects and Types and Classes",
+			"Covers topics like Closures and Decorators, using magic methods in Python, Collections, Exceptions, Errors, and using Context Managers"
+		],
+		"hrefs": ["https://www.hackerrank.com/certificates/225d8495da2d", "https://www.hackerrank.com/certificates/5be50dcb4287"]
+	}
+}
