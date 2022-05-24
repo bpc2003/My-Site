@@ -1,19 +1,9 @@
 {
-  "Skills": [
-    ["Python", "fa-brands fa-python python-logo"],
-    ["JavaScript", "fa-brands fa-js js-logo"],
-    ["HTML 5", "fa-brands fa-html5 html-logo"],
-    ["CSS 3", "fa-brands fa-css3-alt css-logo"],
-    ["Node.js", "fa-brands fa-node-js node-logo"],
-    ["MongoDB", "fa-solid fa-database"],
-    ["React", "fa-brands fa-react react-logo"],
-    ["Bootstrap 5", "fa-brands fa-bootstrap bootstrap-logo"]
-  ],
-  "Certificates": {
-    "logos": ["fa-brands fa-python python-logo cert-logo", "fa-brands fa-python python-logo cert-logo"],
-    "titles": ["Python (Basic)", "Python (Intermediate)"],
-    "descs": ["Covers topics like Scalar Types, Operators and Control Flow, Strings, Collections and Iteration, Modularity, Objects and Types and Classes",
-             "Covers topics like Closures and Decorators, using magic methods in Python, Collections, Exceptions, Errors, and using Context Managers"],
-    "hrefs": ["https://www.hackerrank.com/certificates/225d8495da2d", "https://www.hackerrank.com/certificates/5be50dcb4287"]
-  }
+	"Certificates": {
+		"titles": ["Python (Basic)", "Python (Intermediate)"],
+		"descs": ["Covers topics like Scalar Types, Operators and Control Flow, Strings, Collections and Iteration, Modularity, Objects and Types and Classes",
+			"Covers topics like Closures and Decorators, using magic methods in Python, Collections, Exceptions, Errors, and using Context Managers"
+		],
+		"hrefs": ["https://www.hackerrank.com/certificates/225d8495da2d", "https://www.hackerrank.com/certificates/5be50dcb4287"]
+	}
 }

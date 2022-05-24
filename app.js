@@ -2,7 +2,27 @@ require('dotenv').config();
 const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
 const express = require('express');
+const mongoose = require('mongoose');
 const fs = require('fs');
+
+mongoose.connect('mongodb://localhost:27017/SkillsDB');
+
+const SkillSchema = new mongoose.Schema({
+  title: {
+    type: String,
+    required: true
+  },
+  image: {
+    type: String,
+    required: true
+  },
+  active: {
+    type: Boolean,
+    required: true
+  }
+});
+
+const Skill = new mongoose.model('Skill', SkillSchema);
 
 const app = express();
 
@@ -13,11 +33,12 @@ app.use(bodyParser.urlencoded({
 app.set('view engine', 'ejs');
 
 let jsonData;
-let skills;
+let certificates;
+
 try {
   jsonData = fs.readFileSync(__dirname + '/skills.json');
-  skills = JSON.parse(jsonData);
-}  catch (e) {
+  certificates = JSON.parse(jsonData);
+} catch (e) {
   console.log(e)
 }
 
@@ -27,10 +48,10 @@ let date = new Date();
 let currentYear = date.getFullYear()
 
 const transporter = nodemailer.createTransport({
-  host:"smtp.gmail.com",
-  port:587,
-  auth:{
-    user:"benjamin.p.coppe@gmail.com",
+  host: "smtp.gmail.com",
+  port: 587,
+  auth: {
+    user: "benjamin.p.coppe@gmail.com",
     pass: process.env.PASS
   }
 });
@@ -38,12 +59,13 @@ const transporter = nodemailer.createTransport({
 app.use(express.static(__dirname + "/public"));
 
 app.get("/", function(req, res) {
-  res.render("index", {
-    pageTitle: "Ben Coppe",
-    skills: skills.Skills,
-    isActive: isActive,
-    currentYear: currentYear,
-    certificates: skills.Certificates
+  Skill.find({}, function(err, skills) {
+    res.render("index", {
+      pageTitle: "Ben Coppe",
+      skills: skills,
+      certificates: certificates.Certificates,
+      currentYear: currentYear
+    });
   });
 });
 
