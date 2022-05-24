@@ -114,12 +114,12 @@ i {
   transition-duration: 1s;
 }
 
-.python-logo {
-  color: #306998;
-}
-
 .node-logo {
   color: #3C873A;
+}
+
+.react-logo {
+  color: #61DBFB;
 }
 
 .bootstrap-logo {

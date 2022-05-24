@@ -1,7 +1,7 @@
 {
   "Skills": [
-    ["Python", "fa-brands fa-python python-logo"],
     ["Node.js", "fa-brands fa-node-js node-logo"],
+    ["React", "fa-brands fa-react react-logo"],
     ["MongoDB", "fa-solid fa-database"],
     ["Bootstrap 5", "fa-brands fa-bootstrap bootstrap-logo"],
     ["HTML 5", "fa-brands fa-html5 html-logo"],
