@@ -39,10 +39,10 @@
       <div class="col-6">
         <div class="child">
           <% for(let i = 0; i < certificates.titles.length; i++) {%>
-          <div class="card-div">
-            <%- include("partials/card", {title: certificates.titles[i], desc: certificates.descs[i],
-                                          href: certificates.hrefs[i]}); -%>
-          </div>
+            <div class="card-div">
+              <%- include("partials/card", {title: certificates.titles[i], desc: certificates.descs[i],
+                                            href: certificates.hrefs[i]}); -%>
+            </div>
           <% } %>
         </div>
       </div>
