@@ -21,6 +21,7 @@ section .child {
 
 .header, .subheader {
   color: #fff;
+  font-family: "Radio Canada", sans-serif;
 }
 
 /* Intro Section Rules */
