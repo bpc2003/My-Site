@@ -12,8 +12,8 @@ app.use(bodyParser.urlencoded({
 
 app.set('view engine', 'ejs');
 
-var jsonData;
-var skills;
+let jsonData;
+let skills;
 try {
   jsonData = fs.readFileSync(__dirname + '/skills.json');
   skills = JSON.parse(jsonData);
