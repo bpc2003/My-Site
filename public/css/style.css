@@ -115,6 +115,22 @@ i {
   transition-duration: 1s;
 }
 
+.python-logo {
+  color: #306998;
+}
+
+.js-logo {
+  color: #F0DB4F;
+}
+
+.html-logo {
+  color: #E34C26;
+}
+
+.css-logo {
+  color: #264DE4;
+}
+
 .node-logo {
   color: #3C873A;
 }
@@ -127,17 +143,7 @@ i {
   color: #553C7B;
 }
 
-.html-logo {
-  color: #E34C26;
-}
 
-.css-logo {
-  color: #264DE4;
-}
-
-.js-logo {
-  color: #F0DB4F;
-}
 
 .cert-logo {
   font-size: 35px;

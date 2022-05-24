@@ -1,12 +1,13 @@
 {
   "Skills": [
-    ["Node.js", "fa-brands fa-node-js node-logo"],
-    ["React", "fa-brands fa-react react-logo"],
-    ["MongoDB", "fa-solid fa-database"],
-    ["Bootstrap 5", "fa-brands fa-bootstrap bootstrap-logo"],
+    ["Python", "fa-brands fa-python python-logo"],
+    ["JavaScript", "fa-brands fa-js js-logo"],
     ["HTML 5", "fa-brands fa-html5 html-logo"],
     ["CSS 3", "fa-brands fa-css3-alt css-logo"],
-    ["JavaScript", "fa-brands fa-js js-logo"]
+    ["Node.js", "fa-brands fa-node-js node-logo"],
+    ["MongoDB", "fa-solid fa-database"],
+    ["React", "fa-brands fa-react react-logo"],
+    ["Bootstrap 5", "fa-brands fa-bootstrap bootstrap-logo"]
   ],
   "Certificates": {
     "logos": ["fa-brands fa-python python-logo cert-logo", "fa-brands fa-python python-logo cert-logo"],
