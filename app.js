@@ -56,13 +56,6 @@ const transporter = nodemailer.createTransport({
 
 app.use(express.static(__dirname + "/public"));
 
-app.all(/.*/, function (req, res){
-  let host = req.header("host");
-  if(host.match(/^herokuapp\..*/i)) {
-    res.redirect(301, "http://www.bencoppe.io/" + req.url);
-  }
-});
-
 app.get("/", function(req, res) {
   Skill.find({}, function(err, skills) {
     res.render("index", {
