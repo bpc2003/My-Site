@@ -46,11 +46,11 @@ let date = new Date();
 let currentYear = date.getFullYear()
 
 const transporter = nodemailer.createTransport({
-  host: "smtp.gmail.com",
+  host: "mail.privateemail.com",
   port: 587,
   auth: {
-    user: "benjamin.p.coppe@gmail.com",
-    pass: process.env.GMAIL_PASS
+    user: "contact@bencoppe.io",
+    pass: process.env.EMAIL_PASS
   }
 });
 
