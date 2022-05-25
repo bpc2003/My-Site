@@ -26,6 +26,16 @@ const Skill = new mongoose.model('Skill', SkillSchema);
 
 const app = express();
 
+self.app.all(/.*/, function(req, res, next) {
+  var host = req.header("host");
+  if (host.match(/^herokuapp\..*/i)) {
+    res.redirect(301, "http://www." + host + req.url);
+  } else {
+    next();
+  }
+});
+
+
 app.use(bodyParser.urlencoded({
   extended: true
 }));
