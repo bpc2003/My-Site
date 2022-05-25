@@ -95,7 +95,7 @@ app.post("/Contact-Me", function(req, res) {
 
   if (email.length > 0 && phoneNumber.length > 0 && name.length > 0) {
     transporter.sendMail({
-      from: 'benjamin.p.coppe@gmail.com',
+      from: 'contact@bencoppe.io',
       to: 'benjamin.p.coppe@gmail.com',
       subject: name + ' Wants to get in touch',
       text: 'Email: ' + email + '\nPhone Number: ' + phoneNumber + '\nMessage: ' + msg
