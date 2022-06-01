@@ -22,7 +22,7 @@ app.post("/failure", function(req, res) {
   res.redirect("/Contact-Me");
 });
 
-const port = process.env.PORT;
+const port = 5000 || process.env.PORT;
 
 app.listen(port, function() {
   console.log("Running on port " + port);
