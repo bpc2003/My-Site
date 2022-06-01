@@ -4,8 +4,7 @@
   "description": "express-server",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node app.js"
+    "server": "nodemon app.js"
   },
   "author": "bpc2003",
   "license": "ISC",

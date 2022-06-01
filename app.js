@@ -1,130 +1,29 @@
 require('dotenv').config();
-const bodyParser = require('body-parser');
-const nodemailer = require('nodemailer');
 const express = require('express');
 const mongoose = require('mongoose');
-const fs = require('fs');
 
-mongoose.connect('mongodb+srv://admin:' + process.env.MONGO_PASS + '@cluster0.l20et.mongodb.net/SkillsDB');
+const home = require("./routes/frontend/home");
+const contact = require("./routes/frontend/contact");
+const about = require("./routes/frontend/about")
 
-const SkillSchema = new mongoose.Schema({
-  title: {
-    type: String,
-    required: true
-  },
-  image: {
-    type: String,
-    required: true
-  },
-  active: {
-    type: Boolean,
-    required: true
-  }
-});
-
-const Skill = new mongoose.model('Skill', SkillSchema);
+mongoose.connect("mongodb://localhost:27017/SkillsDB")
+  .then(() => console.log("Connected to MongoDB"))
+  .catch(err => console.log(err));
 
 const app = express();
 
-app.use(bodyParser.urlencoded({
-  extended: true
-}));
-
-app.set('view engine', 'ejs');
-
-let jsonData;
-let certificates;
-
-try {
-  jsonData = fs.readFileSync(__dirname + '/certificates.json');
-  certificates = JSON.parse(jsonData);
-} catch (e) {
-  console.log(e)
-}
-
-let date = new Date();
-let currentYear = date.getFullYear()
-
-const transporter = nodemailer.createTransport({
-  host: "mail.privateemail.com",
-  port: 587,
-  auth: {
-    user: "contact@bencoppe.io",
-    pass: process.env.EMAIL_PASS
-  }
-});
-
+app.set('view engine', 'ejs')
 app.use(express.static(__dirname + "/public"));
 
-app.get("/", function(req, res) {
-  Skill.find({}, function(err, skills) {
-    res.render("index", {
-      pageTitle: "Ben Coppe",
-      skills: skills,
-      certificates: certificates.Certificates,
-      currentYear: currentYear
-    });
-  });
-});
-
-app.get("/about-me", function(req, res) {
-  res.render("about", {
-    pageTitle: "About Me",
-    currentYear: currentYear
-  });
-});
-
-app.get("/Contact-Me", function(req, res) {
-  res.render("contact-me", {
-    pageTitle: "Contact Me",
-    currentYear: currentYear
-  });
-});
-
-app.post("/Contact-Me", function(req, res) {
-  let email = req.body.Email;
-  let phoneNumber = req.body.phoneNumber;
-  let name = req.body.name;
-  var msg;
-
-  if (req.body.msg.length > 0) {
-    msg = req.body.msg;
-  } else {
-    msg = "No Message";
-  }
-
-  if (email.length > 0 && phoneNumber.length > 0 && name.length > 0) {
-    transporter.sendMail({
-      from: 'contact@bencoppe.io',
-      to: 'benjamin.p.coppe@gmail.com',
-      subject: name + ' Wants to get in touch',
-      text: 'Email: ' + email + '\nPhone Number: ' + phoneNumber + '\nMessage: ' + msg
-    }, function(err, data) {
-      if (err) {
-        console.log(err);
-        res.render("failure", {
-          currentYear: currentYear
-        });
-      } else {
-        console.log("Sent Email successfully");
-        res.render("thanks", {
-          pageTitle: "Thank You",
-          name: name.split(" ")[0],
-          currentYear: currentYear
-        });
-      }
-    });
-  } else {
-    res.render("failure", {
-      currentYear: currentYear
-    });
-  }
-});
-
+app.use("/", home)
+app.use("/contact-me", contact)
+app.use("/about-me", about)
 app.post("/failure", function(req, res) {
   res.redirect("/Contact-Me");
 });
 
-app.listen(process.env.PORT, function() {
-  console.log("Running on port " + process.env.PORT);
+const port = process.env.PORT;
+
+app.listen(port, function() {
+  console.log("Running on port " + port);
 });
