@@ -6,7 +6,7 @@ const home = require("./routes/frontend/home");
 const contact = require("./routes/frontend/contact");
 const about = require("./routes/frontend/about")
 
-mongoose.connect("mongodb+srv://admin:" + process.env.MONGO_PASS + "@cluster0.l20et.mongodb.net/SkillsDB")
+mongoose.connect("mongodb://localhost:27017/SkillsDB")
   .then(() => console.log("Connected to MongoDB"))
   .catch(err => console.log(err));
 

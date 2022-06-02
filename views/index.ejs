@@ -38,12 +38,12 @@
       </div>
       <div class="col-6">
         <div class="child">
-          <% for(let i = 0; i < certificates.titles.length; i++) {%>
+          <% certs.forEach(cert => {%>
             <div class="card-div">
-              <%- include("partials/card", {title: certificates.titles[i], desc: certificates.descs[i],
-                                            href: certificates.hrefs[i]}); -%>
+              <%- include("partials/card", {title: cert.title, desc: cert.desc,
+                                            href: cert.href}); -%>
             </div>
-          <% } %>
+          <% }) %>
         </div>
       </div>
     </div>
