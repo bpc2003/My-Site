@@ -10,9 +10,9 @@ import {
 } from 'reactstrap';
 
 import React, {Component} from 'react';
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import {faCircleInfo, faEnvelope} from '@fortawesome/free-solid-svg-icons';
-import {faGithub} from '@fortawesome/free-brands-svg-icons'
+import InfoIcon from '@mui/icons-material/Info';
+import AlternateEmailIcon from '@mui/icons-material/AlternateEmail';
+import GitHubIcon from '@mui/icons-material/GitHub';
 
 class AppNavbar extends Component {
     state = {
@@ -39,17 +39,17 @@ class AppNavbar extends Component {
                         <Nav className="ms-auto" navbar>
                             <NavItem>
                                 <NavLink href="/about">
-                                    <FontAwesomeIcon icon={faCircleInfo}/> About
+                                    <InfoIcon /> About
                                 </NavLink>
                             </NavItem>
                             <NavItem>
                                 <NavLink href="/contact">
-                                    <FontAwesomeIcon icon={faEnvelope}/> Contact
+                                    <AlternateEmailIcon /> Contact
                                 </NavLink>
                             </NavItem>
                             <NavItem>
                                 <NavLink href="https://github.com/bpc2003">
-                                    <FontAwesomeIcon icon={faGithub}/> Github
+                                    <GitHubIcon /> Github
                                 </NavLink>
                             </NavItem>
                         </Nav>
