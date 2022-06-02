@@ -13,20 +13,20 @@ router.route("/")
         const name = req.body.name;
         let msg;
 
-        if(req.body.msg){
+        if (req.body.msg) {
             msg = req.body.msg;
         } else {
             msg = "No Message";
         }
 
-        if(email && phone_number && name) {
+        if (email && phone_number && name) {
             transporter.sendMail({
                 from: 'contact@bencoppe.io',
                 to: 'benjamin.p.coppe@gmail.com',
                 subject: name + ' Wants to get in touch',
                 text: 'Email: ' + email + '\nPhone Number: ' + phone_number + '\nMessage: ' + msg
             }, (err, data) => {
-                if(err) {
+                if (err) {
                     console.log(err);
                     res.json({
                         success: false,

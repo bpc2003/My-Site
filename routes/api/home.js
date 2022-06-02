@@ -6,7 +6,7 @@ const Cert = require("../../models/Cert");
 const router = express.Router();
 
 router.route("/")
-    .get(async (req, res)=> {
+    .get(async (req, res) => {
         const Skills = await Skill.find({});
         const Certs = await Cert.find({});
 
