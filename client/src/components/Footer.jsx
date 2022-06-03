@@ -9,8 +9,10 @@ class Footer extends Component {
     render() {
         return (
             <Container fluid className='footer bg-dark'>
-                <a href="/about">About Me</a>
-                <a href="/contact">Contact Me</a>
+                <a href="/about">About</a>
+                <span>- </span>
+                <a href="/contact">Contact</a>
+                <span>- </span>
                 <a href="https://github.com/bpc2003">Github</a>
                 <p>&copy; {this.state.currentYear} Benjamin Coppe</p>
             </Container>

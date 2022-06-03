@@ -5,6 +5,7 @@ import './App.css';
 
 import AppNavbar from './components/AppNavbar';
 import Footer from './components/Footer';
+import Home from './components/Home';
 import store from "./store";
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
         <Provider store={store}>
           <div className="App">
             <AppNavbar/>
+            <Home />
             <Footer />
           </div>
         </Provider>
