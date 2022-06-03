@@ -1,13 +1,14 @@
 h1, h2, h3, h4, h5, h6 {
     font-family: "Roboto", sans-serif;
+    color: #21251FD9;
 }
 
-.top {
+.container-fluid {
     text-align: center;
     padding: 7% 15%;
 }
 
-.top .child {
+.container-fluid .child{
     text-align: left;
     display: inline-block;
     color: #fff;
@@ -15,6 +16,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .header, .subheader {
     font-family: "Radio Canada", sans-serif;
+    color: #fff;
 }
 
 p {
@@ -22,17 +24,19 @@ p {
     color: gray
 }
 
-.footer {
-    color: white;
-    text-align: center;
-}
-
 .footer a, .footer p {
-    margin-right: 5px;
+    margin-right: 10px;
     color: white;
     text-decoration: none; 
+    text-align: center;
 }
 
 .footer a:hover{
     color: #0d6efd;
+}
+
+@media only screen and (hover: none) and (pointer: coarse){
+    .ctm {
+        width: 300px;
+    }     
 }

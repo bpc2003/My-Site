@@ -29,27 +29,27 @@ class AppNavbar extends Component {
         return (
             <div>
                 <Navbar color="dark" dark expand="sm">
-                    <Container>
+                    <Container style={{textAlign: "left"}}>
                         <NavbarBrand href="/">
                             Benjamin Coppe
                         </NavbarBrand>
                         <NavbarToggler onClick={this.toggle}/>
                     </Container>
                     <Collapse isOpen={this.state.isOpen} navbar>
-                        <Nav className="ms-auto" navbar>
+                        <Nav className="ms-auto" navbar style={{textAlign: "left"}}>
                             <NavItem>
                                 <NavLink href="/about">
-                                    <InfoIcon /> About
+                                    <InfoIcon /> {this.state.isOpen && "About"}
                                 </NavLink>
                             </NavItem>
                             <NavItem>
                                 <NavLink href="/contact">
-                                    <AlternateEmailIcon /> Contact
+                                    <AlternateEmailIcon /> {this.state.isOpen && "Contact"}
                                 </NavLink>
                             </NavItem>
                             <NavItem>
                                 <NavLink href="https://github.com/bpc2003">
-                                    <GitHubIcon /> Github
+                                    <GitHubIcon /> {this.state.isOpen && "Github"}
                                 </NavLink>
                             </NavItem>
                         </Nav>

@@ -18,8 +18,12 @@ import PropTypes from 'prop-types';
 import {loadHomePage} from '../actions/homeActions';
 
 class Home extends Component {
+    static propTypes = {
+        skills: PropTypes.object.isRequired
+    };
+
     render() {
-        // const { Technologies, Certs } = this.props.skills;
+        const { Technologies, Certs } = this.props.skills;
         return (
             <div>
                 <Container fluid className='top bg-dark mb-5'>
@@ -32,11 +36,21 @@ class Home extends Component {
                         </h2>
                     </div>
                 </Container>
-                <Container fluid>
+                <Container fluid className='intro'>
+                    <div className='child'>
+                        <h3>
+                            Hello there
+                        </h3>
+                        <p>
+                            Hello there, I'm Ben Coppe, A MERN Stack developer
+                        </p>
+                    </div>
+                </Container>
+                <Container fluid style={{marginBottom: "10px"}}>
                     <Row>
                         <Col xs="6">
                             <h3>Test</h3>
-                            <div>
+                            <div className='child ctm'>
                                 <h2>Contact Me:</h2>
                                 <h3>Email &amp; Phone Number:</h3>
                                 <p>
