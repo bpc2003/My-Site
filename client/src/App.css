@@ -1,9 +1,33 @@
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Roboto", sans-serif;
+}
+
+.top {
+    text-align: center;
+    padding: 7% 15%;
+}
+
+.top .child {
+    text-align: left;
+    display: inline-block;
+    color: #fff;
+}
+
+.header, .subheader {
+    font-family: "Radio Canada", sans-serif;
+}
+
+p {
+    font-family: "Radio Canada", sans-serif;
+    color: gray
+}
+
 .footer {
     color: white;
     text-align: center;
 }
 
-.footer a {
+.footer a, .footer p {
     margin-right: 5px;
     color: white;
     text-decoration: none; 
