@@ -27,7 +27,7 @@ class AppNavbar extends Component {
 
     render() {
         return (
-            <div>
+            <div className='app-nav'>
                 <Navbar color="dark" dark expand="sm">
                     <Container style={{textAlign: "left"}}>
                         <NavbarBrand href="/">

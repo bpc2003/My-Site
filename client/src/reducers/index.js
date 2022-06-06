@@ -4,6 +4,5 @@ import homeReducer from "./homeReducer";
 
 export default combineReducers({
     home: homeReducer,
-    contact: contactReducers,
-    loading: false
+    contact: contactReducers
 });

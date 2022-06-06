@@ -10,6 +10,7 @@ export default function(state=initState, action) {
     switch(action.type) {
         case GET_SKILLS:
             return {
+                ...state,
                 technologies: action.payload[0],
                 certs: action.payload[1]
             };

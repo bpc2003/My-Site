@@ -2,14 +2,12 @@ import {
     Card,
     CardBody,
     CardTitle,
+    CardHeader,
     Container,
     Col,
-    Row,
-    Carousel,
-    CarouselItem,
-    CarouselControl,
-    CarouselIndicators
+    Row
 } from 'reactstrap';
+import Carousel from 'better-react-carousel';
 
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
@@ -19,20 +17,27 @@ import {loadHomePage} from '../actions/homeActions';
 
 class Home extends Component {
     static propTypes = {
-        skills: PropTypes.object.isRequired
+        home: PropTypes.object.isRequired
     };
 
+    componentDidMount() {
+        this.props.loadHomePage();
+    }
+
     render() {
-        const { Technologies, Certs } = this.props.skills;
+        const {technologies, certs} = this.props.home;
         return (
-            <div>
-                <Container fluid className='top bg-dark mb-5'>
+            <div className="content">
+                <Container fluid className='top bg-dark'>
                     <div className='child'>
                         <h1 className='header'>
                             Ben Coppe
                         </h1>
                         <h2 className='subheader'>
-                            A <span style={{textDecoration: "underline"}}>pro</span>grammer
+                            A <span
+                                style={{
+                                textDecoration: "underline"
+                            }}>pro</span>grammer
                         </h2>
                     </div>
                 </Container>
@@ -42,14 +47,25 @@ class Home extends Component {
                             Hello there
                         </h3>
                         <p>
-                            Hello there, I'm Ben Coppe, A MERN Stack developer
+                            I'm a student trying to jump-start my career into web development
                         </p>
                     </div>
                 </Container>
-                <Container fluid style={{marginBottom: "10px"}}>
+                <Container fluid className="main-content">
                     <Row>
                         <Col xs="6">
-                            <h3>Test</h3>
+                            <div className="car ms-auto" >
+                                <h2>Technologies</h2>
+                                <Carousel>
+                                    {technologies.map(({_id, title, image}) => (
+                                        <Carousel.Item key={_id}>
+                                            <i className={image}></i>
+                                            <h3>{title}</h3>
+                                        </Carousel.Item>
+                                    ))}
+                                </Carousel>
+                            </div>
+
                             <div className='child ctm'>
                                 <h2>Contact Me:</h2>
                                 <h3>Email &amp; Phone Number:</h3>
@@ -62,8 +78,22 @@ class Home extends Component {
                             </div>
                         </Col>
                         <Col xs="6">
-                            <h3>Test</h3>
-                            <h3>Test</h3>
+                            {certs.map(({_id, title, desc, href}) => (
+                                <Card
+                                    key={_id}
+                                    className="child"
+                                >
+                                    <CardHeader>
+                                        <CardTitle>
+                                            <h3>{title}</h3>
+                                        </CardTitle>
+                                    </CardHeader>
+                                    <CardBody>
+                                        <p>{desc}</p>
+                                        <a href={href} className='btn btn-outline-primary btn-lg'>Certification</a>
+                                    </CardBody>
+                                </Card>
+                            ))}
                         </Col>
                     </Row>
                 </Container>
@@ -72,4 +102,6 @@ class Home extends Component {
     }
 }
 
-export default Home;
+const mapStateToProps = state => ({home: state.home})
+
+export default connect(mapStateToProps, {loadHomePage})(Home);

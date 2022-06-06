@@ -1,9 +1,0 @@
-@media (pointer:none), (pointer:coarse) {
-  body {
-    font-size: 1.5rem;
-  }
-
-  h1, h2, h3 {
-    font-size: 2rem;
-  }
-}
