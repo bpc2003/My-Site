@@ -11,7 +11,7 @@ class About extends Component {
                     back-end and front-end development. He knows how to make a website that pops out
                     but is still easy on the eyes and how to make it functional. He highly values
                     honesty and integrity and is available for freelance or consulting work; you can
-                    contact him here.</p>
+                    contact him <a href="/contact" style={{textDecoration: "none"}}>here</a>.</p>
                 </div>
             </Container>
         )

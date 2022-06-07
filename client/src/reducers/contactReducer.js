@@ -1,4 +1,4 @@
-import { SEND_MESSAGE } from "../actions/types";
+import { SEND_MESSAGE, FAILED_SEND } from "../actions/types";
 
 const initState = {
     name: "",
@@ -15,6 +15,14 @@ export default function(state=initState, action) {
                 email: action.payload.email,
                 phone_number: action.payload.phone_number,
                 msg: action.payload.msg
+            };
+        
+        case FAILED_SEND:
+            return {
+                name: "",
+                email: "",
+                phone_number: "",
+                msg: ""
             };
         
         default:

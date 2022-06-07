@@ -45,17 +45,17 @@ class AppNavbar extends Component {
                     }}>
                         <NavItem>
                             <NavLink href="/about">
-                                <InfoIcon/> {this.state.isOpen && "About"}
+                                <InfoIcon/> About
                             </NavLink>
                         </NavItem>
                         <NavItem>
                             <NavLink href="/contact">
-                                <AlternateEmailIcon/> {this.state.isOpen && "Contact"}
+                                <AlternateEmailIcon/> Contact
                             </NavLink>
                         </NavItem>
                         <NavItem>
                             <NavLink href="https://github.com/bpc2003">
-                                <GitHubIcon/> {this.state.isOpen && "Github"}
+                                <GitHubIcon/> Github
                             </NavLink>
                         </NavItem>
                     </Nav>

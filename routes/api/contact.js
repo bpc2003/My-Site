@@ -27,8 +27,7 @@ router.route("/")
                 text: 'Email: ' + email + '\nPhone Number: ' + phone_number + '\nMessage: ' + msg
             }, (err, data) => {
                 if (err) {
-                    console.log(err);
-                    res.json({
+                    res.status(500).json({
                         success: false,
                         message: "Server side error, please contact site admin"
                     });
@@ -41,7 +40,7 @@ router.route("/")
                 }
             });
         } else {
-            res.json({
+            res.status(400).json({
                 success: false,
                 message: "One or more fields are empty!"
             });
