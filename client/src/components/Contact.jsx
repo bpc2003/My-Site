@@ -123,5 +123,4 @@ class Contact extends Component {
 }
 
 const mapStateToProps = state => ({contact: state.contact, error: state.error});
-
 export default connect(mapStateToProps, {sendMessage, clearErrors})(Contact);
