@@ -27,35 +27,40 @@ class AppNavbar extends Component {
 
     render() {
         return (
-            <div className='app-nav'>
-                <Navbar color="dark" dark expand="sm">
-                    <Container style={{textAlign: "left"}}>
-                        <NavbarBrand href="/">
-                            Benjamin Coppe
-                        </NavbarBrand>
-                        <NavbarToggler onClick={this.toggle}/>
-                    </Container>
-                    <Collapse isOpen={this.state.isOpen} navbar>
-                        <Nav className="ms-auto" navbar style={{textAlign: "left"}}>
-                            <NavItem>
-                                <NavLink href="/about">
-                                    <InfoIcon /> {this.state.isOpen && "About"}
-                                </NavLink>
-                            </NavItem>
-                            <NavItem>
-                                <NavLink href="/contact">
-                                    <AlternateEmailIcon /> {this.state.isOpen && "Contact"}
-                                </NavLink>
-                            </NavItem>
-                            <NavItem>
-                                <NavLink href="https://github.com/bpc2003">
-                                    <GitHubIcon /> {this.state.isOpen && "Github"}
-                                </NavLink>
-                            </NavItem>
-                        </Nav>
-                    </Collapse>
-                </Navbar>
-            </div>
+            <Navbar color="dark" dark expand="sm" className='app-nav'>
+                <Container style={{
+                    textAlign: "left"
+                }}>
+                    <NavbarBrand href="/">
+                        Benjamin Coppe
+                    </NavbarBrand>
+                    <NavbarToggler onClick={this.toggle}/>
+                </Container>
+                <Collapse isOpen={this.state.isOpen} navbar>
+                    <Nav
+                        className="ms-auto"
+                        navbar
+                        style={{
+                        textAlign: "left"
+                    }}>
+                        <NavItem>
+                            <NavLink href="/about">
+                                <InfoIcon/> {this.state.isOpen && "About"}
+                            </NavLink>
+                        </NavItem>
+                        <NavItem>
+                            <NavLink href="/contact">
+                                <AlternateEmailIcon/> {this.state.isOpen && "Contact"}
+                            </NavLink>
+                        </NavItem>
+                        <NavItem>
+                            <NavLink href="https://github.com/bpc2003">
+                                <GitHubIcon/> {this.state.isOpen && "Github"}
+                            </NavLink>
+                        </NavItem>
+                    </Nav>
+                </Collapse>
+            </Navbar>
         );
     }
 }

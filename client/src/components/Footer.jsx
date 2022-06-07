@@ -8,7 +8,7 @@ class Footer extends Component {
 
     render() {
         return (
-            <Container fluid className='footer bg-dark' style={{padding: "2% 5%", marginBottom: "0"}}>
+            <Container fluid className='footer bg-dark'>
                 <a href="/about">About</a>
                 <a href="/contact">Contact</a>
                 <a href="https://github.com/bpc2003">Github</a>

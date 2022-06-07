@@ -43,6 +43,7 @@ class Home extends Component {
                 </Container>
                 <Container fluid className='intro'>
                     <div className='child'>
+                        <i className="fa-solid fa-hand"></i>
                         <h3>
                             Hello there
                         </h3>
