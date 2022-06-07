@@ -83,6 +83,9 @@ class Contact extends Component {
         return (
             <Container>
                 {this.state.submitted && this.Alert()}
+                <Container fluid style={{paddingBottom: "0"}}>
+                    <h3 className='child' style={{color: "#21251FD9"}}>Contact Me:</h3>
+                </Container>
                 <Form onSubmit={this.onSubmit}>
                     <FormGroup>
                         <Label for="name">Name:</Label>
