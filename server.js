@@ -5,7 +5,7 @@ const mongoose = require('mongoose');
 const homeAPI = require("./routes/api/home");
 const contactAPI = require("./routes/api/contact");
 
-mongoose.connect("mongodb://localhost:27017/SkillsDB")
+mongoose.connect("mongodb+srv://admin:" + process.env.MONGO_PASS + "@cluster0.l20et.mongodb.net/SkillsDB")
   .then(() => console.log("Connected to MongoDB"))
   .catch(err => console.log(err));
 
@@ -15,6 +15,14 @@ app.use(express.json());
 
 app.use("/api/home", homeAPI);
 app.use("/api/contact", contactAPI);
+
+if(process.env.NODE_ENV === 'production') {
+  app.use(express.static("./client/build"));
+
+  app.get('*', (req, res) =>{
+    res.sendFile(__dirname + "client/build/index.html");
+  });
+}
 
 const port = process.env.PORT || 5000;
 
