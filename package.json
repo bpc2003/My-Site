@@ -2,7 +2,7 @@
   "name": "My-Site",
   "version": "1.0.0",
   "description": "express-server",
-  "main": "app.js",
+  "main": "server.js",
   "scripts": {
     "client-install": "npm i --prefix client",
     "server": "nodemon server.js",
