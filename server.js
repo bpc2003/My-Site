@@ -18,6 +18,18 @@ app.use("/api/contact", contactAPI);
 
 if(process.env.NODE_ENV === 'production') {
   app.use(express.static("./client/build"));
+
+  app.get("/about", (req, res) => {
+    res.sendFile(`${__dirname}/client/build/index.html`)
+  });
+
+  app.get("/contact", (req, res) => {
+    res.sendFile(`${__dirname}/client/build/index.html`)
+  });
+
+  app.get("/*", (req, res) => {
+    res.sendFile(`${__dirname}/client/build/index.html`)
+  });
 }
 
 console.log(process.env.PORT)
