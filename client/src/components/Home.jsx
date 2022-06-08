@@ -54,14 +54,32 @@ class Home extends Component {
                 </Container>
                 <Container fluid className="main-content">
                     <Row>
-                        <Col xs="6">
-                            <div className="car ms-auto" >
+                        <Col md="6">
+                            <h2 className="col-title">Certifications</h2>
+                            {certs.map(({_id, title, desc, href}) => (
+                                <Card key={_id} className="child">
+                                    <CardHeader>
+                                        <CardTitle>
+                                            <h3>{title}</h3>
+                                        </CardTitle>
+                                    </CardHeader>
+                                    <CardBody>
+                                        <p>{desc}</p>
+                                        <a href={href} className='btn btn-outline-primary btn-lg'>Certification</a>
+                                    </CardBody>
+                                </Card>
+                            ))}
+                        </Col>
+                        <Col md="6">
+                            <div className="car ms-auto">
                                 <h2>Technologies</h2>
                                 <Carousel>
                                     {technologies.map(({_id, title, image}) => (
                                         <Carousel.Item key={_id}>
-                                            <i className={image}></i>
-                                            <h3>{title}</h3>
+                                            <div className='item'>
+                                                <i className={image}></i>
+                                                <h3>{title}</h3>
+                                            </div>
                                         </Carousel.Item>
                                     ))}
                                 </Carousel>
@@ -77,24 +95,6 @@ class Home extends Component {
                                 </p>
                                 <a href="/contact" className='btn btn-outline-dark btn-lg'>Contact Me</a>
                             </div>
-                        </Col>
-                        <Col xs="6">
-                            {certs.map(({_id, title, desc, href}) => (
-                                <Card
-                                    key={_id}
-                                    className="child"
-                                >
-                                    <CardHeader>
-                                        <CardTitle>
-                                            <h3>{title}</h3>
-                                        </CardTitle>
-                                    </CardHeader>
-                                    <CardBody>
-                                        <p>{desc}</p>
-                                        <a href={href} className='btn btn-outline-primary btn-lg'>Certification</a>
-                                    </CardBody>
-                                </Card>
-                            ))}
                         </Col>
                     </Row>
                 </Container>

@@ -141,14 +141,9 @@ i {
         font-size: 2rem;
     }
 
-    .ctm {
-        width: 300px;
-        right: 3rem;
-    }
-
     .card {
         width: 12rem;
-        left: 4rem;
+        left: -2.5rem;
     }
 
     .about {
@@ -156,10 +151,22 @@ i {
     }
 
     .about p {
-        width: 60%;
+        width: 80%;
     }
 
     form {
         padding-bottom: 55%;
+    }
+
+    .col-md-6 {
+        margin-bottom: 3rem;
+    }
+
+    .car {
+        margin-bottom: 3rem;
+    }
+
+    .col-title {
+        text-align: left;
     }
 }
