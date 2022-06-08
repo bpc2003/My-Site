@@ -116,7 +116,7 @@ class Contact extends Component {
                     </FormGroup>
                     <FormGroup>
                         <Label for="msg">Message:</Label>
-                        <Input id="msg" name="msg" type="textarea" onChange={this.onChange}/>
+                        <Input id="msg" name="msg" type="textarea" onChange={this.onChange} style={{height: "12.5rem"}}/>
                     </FormGroup>
                     <Button color="primary" className="btn-lg">Submit</Button>
                 </Form>
