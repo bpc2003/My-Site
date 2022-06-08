@@ -48,7 +48,8 @@ class Home extends Component {
                             Hello there
                         </h3>
                         <p>
-                            I'm a freelance MERN stack developer
+                            I'm a freelance MERN stack developer,
+                            available for work
                         </p>
                     </div>
                 </Container>
