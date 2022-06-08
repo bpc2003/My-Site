@@ -48,7 +48,7 @@ class Home extends Component {
                             Hello there
                         </h3>
                         <p>
-                            I'm a student trying to jump-start my career into web development
+                            I'm a freelance MERN stack developer
                         </p>
                     </div>
                 </Container>
