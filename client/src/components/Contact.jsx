@@ -45,6 +45,7 @@ class Contact extends Component {
 
     onChange = event => {
         this.props.clearErrors();
+        this.setState({submitted: false})
         this.setState({
             [event.target.name]: event.target.value
         });
